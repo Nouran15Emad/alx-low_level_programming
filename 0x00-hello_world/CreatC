@@ -1,0 +1,5 @@
+#!/bin/bash
+echo'Enter File name'
+read FileName
+echo '#include <stdio.h>'>${FileName}
+chmod +x ${FileName}
