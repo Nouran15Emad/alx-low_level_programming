@@ -1,0 +1,6 @@
+#!/bin/bash
+echo Enter the commit message
+read com
+git add .
+git commit -m '${com}'
+git push
