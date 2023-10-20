@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-/*
- * main - Print Alphabet
+/**
+ * main - Print Alphabets char
  *
  * Return: Always 0 (Sucess)
  * Description: This function prints alphabets
