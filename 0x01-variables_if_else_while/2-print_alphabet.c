@@ -4,6 +4,7 @@
  * main - Print Alphabet
  *
  * Return: Always 0 (Sucess)
+ * Description: This function prints alphabets
  */
 
 int main(void)
