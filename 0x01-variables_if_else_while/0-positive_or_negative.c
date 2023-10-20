@@ -5,7 +5,7 @@
 /**
  * main - Check the integer given Randomly and print its case
  *
- * Return : Always 0 (Sucess)
+ * Return: Always 0 (Sucess)
  */
 
 int main(void)
