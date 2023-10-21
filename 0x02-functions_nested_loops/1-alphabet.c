@@ -2,13 +2,19 @@
 #include "main.h"
 
 /**
-*main - Calling a function that prints lowerCase Alphabet
-*
-*Return: Always 0 (Sucess)
-*/
+ * print_alphabet - Prints LowerCase Alphabet
+ *
+ *
+ */
 
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	char a2z = 'a';
+
+	while (a2z <= 'z')
+	{
+		_putchar(a2z);
+		a2z++;
+	}
+	_putchar('\n');
 }
