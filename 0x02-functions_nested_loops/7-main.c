@@ -9,14 +9,13 @@
 
 int main(void)
 {
-	int r;
+	signed int r;
 
 
-	print_last_digit(158);
-	print_last_digit(74);
+	print_last_digit(98);
+	print_last_digit(0);
 
-	r = print_last_digit(1024);
-	_putchar('0' + r);
-	_putchar('\n');
+	r = print_last_digit(-1024);
+	printf("%d\n", r);
 	return (0);
 }

@@ -7,10 +7,10 @@
 *Return: The last digit of a number (integer)
 */
 
-int print_last_digit(int n)
+signed int print_last_digit( signed int n)
 {
 	n = n % 10;
-	_putchar(n + '0');
+	_putchar('0' + n);
 
 	return (n);
 }
