@@ -14,10 +14,8 @@ int main(void)
 
 	print_last_digit(158);
 	print_last_digit(74);
-	print_last_digit(0);
-	print_last_digit(8000);
 
-	r = print_last_digit(1897);
+	r = print_last_digit(1024);
 	_putchar('0' + r);
 	_putchar('\n');
 	return (0);
