@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	signed int r;
+	int r;
 
 
 	print_last_digit(98);

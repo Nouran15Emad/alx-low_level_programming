@@ -7,10 +7,9 @@
 *Return: The last digit of a number (integer)
 */
 
-signed int print_last_digit( signed int n)
+int print_last_digit(int n)
 {
 	n = n % 10;
-	_putchar('0' + n);
-
+	printf("%d", n);
 	return (n);
 }
