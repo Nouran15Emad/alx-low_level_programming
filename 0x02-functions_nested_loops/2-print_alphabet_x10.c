@@ -13,7 +13,7 @@ void print_alphabet_x10(void)
 
 	while (i < 10)
 	{
-	       	char a2z = 'a';
+		char a2z = 'a';
 
 		while (a2z <= 'z')
 		{
@@ -23,7 +23,6 @@ void print_alphabet_x10(void)
 
 		_putchar('\n');
 		i++;
-		
 	}
 
 }
