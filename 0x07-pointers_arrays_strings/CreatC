@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Enter File name :"
+read FileName
+
+
+echo -e "#include <stdio.h>">${FileName}
+echo -e "#include \"main.h\"\n">>${FileName}
+
+
+
+echo -e "int main(void)
+{
+	return (0);
+}">>${FileName}
+
+chmod +x ${FileName}
