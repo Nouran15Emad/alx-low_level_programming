@@ -14,13 +14,17 @@ void times_table(void)
 
 	while (m < 10)
 	{
-		while (n < 10)
+		while (n <= 8)
 		{
-			printf("%d, ", (n*m));
+			printf("%2d, ", n * m);
 			n++;
+			if (n == 9)
+			{
+				printf("%2d", n * m);
+			}
 		}
 		n = 0;
 		m++;
-		putchar('\n');
+		printf("\n");
 	}
 }
