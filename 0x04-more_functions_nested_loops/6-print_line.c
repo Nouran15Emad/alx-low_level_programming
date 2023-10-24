@@ -3,7 +3,7 @@
 
 /**
 *print_line- print line on treminal
-*
+*@n: integer
 *Return: Always 0 (Sucess)
 */
 
