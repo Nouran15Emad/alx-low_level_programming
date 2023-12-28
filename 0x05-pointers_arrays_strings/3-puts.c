@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
-*_puts - print a string folllowed by new line 
+*_puts - print a string folllowed by new line
 *@str: pointer to a string
 *
 *Return: Always 0 (Sucess)
@@ -15,7 +15,7 @@ void _puts(char *str)
 	i = 0;
 	while (*(str + i) != '\0')
 	{
-		printf("%c",*(str + i));
+		printf("%c", *(str + i));
 		i++;
 	}
 	printf("\n");
