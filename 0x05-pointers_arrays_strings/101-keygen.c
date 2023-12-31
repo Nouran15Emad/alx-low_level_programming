@@ -23,14 +23,15 @@ char *generate_password(void)
 {
 	int i;
 
+	const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
 	char *password = malloc((PASSWORD_LENGTH + 1) * sizeof(char));
 
 	if (password == NULL)
 	{
 		fprintf(stderr, "Memory allocation failed\n");
 		exit(EXIT_FAILURE);
-	}
-	const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	};
 
 	int charset_length = strlen(charset);
 
