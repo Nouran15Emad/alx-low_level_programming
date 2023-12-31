@@ -24,6 +24,7 @@ char *generate_password(void)
 	int i;
 
 	const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	int charset_length = strlen(charset);
 
 	char *password = malloc((PASSWORD_LENGTH + 1) * sizeof(char));
 
@@ -33,7 +34,6 @@ char *generate_password(void)
 		exit(EXIT_FAILURE);
 	};
 
-	int charset_length = strlen(charset);
 
 	srand(time(NULL));
 
