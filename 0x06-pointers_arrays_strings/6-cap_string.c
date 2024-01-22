@@ -17,25 +17,34 @@ char *cap_string(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (j = 0; separators[j] != '\0'; j++)
-		{
-			if (str[i] == separators[j])
+		
+			if (i == 0 || str[i - 1] == ' ' || str[i - 1] == '\n')
 			{
-				i++;/*skip the seperator char*/
-
 				if (str[i] >= 'a' && str[i] <= 'z')/*check if the next element is letter*/
 				{
 					str[i] -= 32; /*convert to uppercase*/
 				}
 			}
-		}
-		if (i == 0 || str[i] == '\n')/*Special case when first letter in first word*/
+		
+		else
 		{
-			if (str[i] >= 'a' && str[i] <= 'z')/*check if the  element is letter*/
+			for (j = 0; j < 13; j++)
 			{
-				str[i] -= 32; /*convert to uppercase*/
+				if (str[i - 1] == separators[j])
+				{
+					if (str[i] >= 'a' && str[i] <= 'z')/*check if the  element is letter*/
+			
+				    {
+						str[i] -= 32; /*convert to uppercase*/
+					}
+			
+
+				}
 			}
+			
 		}
+
+		
 	}
 
 	return (str);
