@@ -14,20 +14,17 @@ char *leet(char *text)
 
 	int i, j;
 
-	for ( i = 0; i != '\0'; i++)
+	for (i = 0; i != '\0'; i++)
 	{
-		for ( j = 0; j < 10; j++)
+		for (j = 0; j < 10; j++)
 		{
 			if (text[i] == leet_chars[j])
 			{
 				text[i] = leet_code[j];
 				break;
 			}
-			
 		}
-		
 	}
-	
 
 	return (text);
 }
