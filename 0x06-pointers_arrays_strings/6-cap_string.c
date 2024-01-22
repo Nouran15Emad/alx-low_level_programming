@@ -9,38 +9,31 @@
 
 char *cap_string(char *str)
 {
-	char separators[] = {' ', '\n', ',', ';', '.', '!',
-	 '?', '\"', '(', ')', '{', '}', '\t'};
+	/*My code with some edits*/
+	int i, j;
 
-	 int i, j;
+	char separators[] = {' ', '\n', ',', ';', '.', '!', '?',
+						'\"', '(', ')', '{', '}', '\t'};
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		int is_separator = 0;
-
 		for (j = 0; separators[j] != '\0'; j++)
-		{   /*Manual separator check*/
+		{
 			if (str[i] == separators[j])
 			{
-				is_separator = 1;
-				break;
+				i++;/*skip the seperator char*/
+
+				if (str[i] >= 'a' && str[i] <= 'z')/*check if the next element is letter*/
+				{
+					str[i] -= 32; /*convert to uppercase*/
+				}
 			}
 		}
-
-		if (is_separator)
+		if (i == 0 || str[i] == '\n')/*Special case when first letter in first word*/
 		{
-			continue;/*Skip separators*/
-		}
-
-		if (i == 0 || is_separator)
-		{
-			/*Capitalize at start or after separators*/
-
-			if (str[i] >= 'a' && str[i] <= 'z')
+			if (str[i] >= 'a' && str[i] <= 'z')/*check if the  element is letter*/
 			{
-				/*Check for lowercase letter*/
-
-				str[i] -= 32;
+				str[i] -= 32; /*convert to uppercase*/
 			}
 		}
 	}
