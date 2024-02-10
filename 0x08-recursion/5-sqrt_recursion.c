@@ -22,6 +22,18 @@ int _sqrt_recursion(int n)
 	}
 	return (_sqrt_helper(n, 1, n));
 }
+
+/**
+*_sqrt_helper - check if the input is natural square root or not
+*@n: integer number >> the square number
+*@start: start guess number or the start of research (integer)
+*@end: the n number too or the end of research (integer)
+*Return: the square root of a number >> integer
+*/
+
+
+
+
 int _sqrt_helper(int n, int start, int end)
 {
 	int mid;
