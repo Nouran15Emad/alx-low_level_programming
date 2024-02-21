@@ -1,14 +1,18 @@
 #!/bin/bash
-#!/bin/bash
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 -c *.c
 
-# Check if any .c files exist in the current directory
-if ls *.c &>/dev/null; then
-    # Compile the .c files into object files
-    gcc -Wall -pedantic -Werror -Wextra -std=gnu89 -c *.c
 
-    # Create the static library
-    ar -rc liball.a *.o
-    ranlib liball.a
+# Get all the .c files in the current directory
+c_files=$(find . -maxdepth 1 -type f -name "*.c")
 
-    # Clean up the object files
-    rm -f *.o
+# Compile each .c file into an object file
+for file in $c_files; do
+    gcc -c "$file" -o "${file%.c}.o"
+done
+
+# Create the static library
+ar -rc  liball.a *.o
+ranlib liball.a
+
+# Clean up the object files
+rm -f *.o
