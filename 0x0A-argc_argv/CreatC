@@ -5,11 +5,18 @@ read FileName
 
 
 echo -e "#include <stdio.h>">${FileName}
-echo -e "#include \"main.h\"\n">>${FileName}
+
+echo -e "
+/**
+*main - print the prgram name
+*@argc: integer == the count of program arguments
+*@argv: array of pointers to strings (the program arguments)
+*Return: Always 0 (Success)
+*/">>$FileName
 
 
 
-echo -e "int main(void)
+echo -e "int main(int argc, char *argv[])
 {
 	return (0);
 }">>${FileName}
