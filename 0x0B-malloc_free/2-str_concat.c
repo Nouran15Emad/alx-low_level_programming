@@ -36,13 +36,15 @@ char *str_concat(char *s1, char *s2)
 	}
 	/*malloc to res string*/
 	res = (char *)malloc((length1 + length2 + 1) * sizeof(char));
-	/*add s1 to res*/
-	for (i = 0; i < length1; i++)
+	if (res == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i < length1; i++)/*add s1 to res*/
 	{
 		res[i] = s1[i];
 	}
-	/*add s2 to res after s1*/
-	for (j = 0; j < length2; j++)
+	for (j = 0; j < length2; j++)/*add s2 to res after s1*/
 	{
 		res[i + j] = s2[j];
 	}
