@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
-*str_concat - concatenates 2 strings & malloc
+*str_concat - concatenate 2 strings & malloc
 *@s1: string to be concat
 *@s2: string to be concat
 *Return: pointer to the res (Sucess) Null (fail)
