@@ -25,7 +25,6 @@ int **alloc_grid(int width, int height)
 	{
 		return (NULL);
 	}
-
 	/* malloc to height (cols) for each row and malloc null check */
 	for (i = 0; i < height; i++)
 	{
@@ -41,7 +40,6 @@ int **alloc_grid(int width, int height)
 			return (NULL);
 		}
 	}
-
 	/* initialization */
 	for (i = 0; i < height; i++)
 	{
