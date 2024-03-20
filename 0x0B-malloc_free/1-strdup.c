@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
-*_strdup -  returns a pointer to a newly allocated space in memory(Copy)
+*_strdup -  return a pointer to a newly allocated space in memory(Copy)
 *@str: string that will be duplicated
 *Return: pointer to the copy char * (Sucess) Null (fail)
 */
